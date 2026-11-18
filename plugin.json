@@ -1,9 +1,10 @@
 {
   "id": "vnbusarchive.colorimetry.nat",
   "name": "VNBUSARCHIVE-Compatible HoyuShot Plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Hoyuuna",
   "description": "Chuẩn hóa trắc sắc học VNBUSARCHIVE: tự động khử 4 loại ám màu trên vùng trung tính (ấm/vàng, lạnh/xanh, magenta/hồng, xanh lá), khóa dải bão hòa màu an toàn (10% - 52%) và chống bệt màu highlight.",
+  "overrides": ["COLOR_ENGINE"],
   "settings": [
     {
       "key": "enableTintCorrection",
