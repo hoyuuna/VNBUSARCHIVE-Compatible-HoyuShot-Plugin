@@ -1,0 +1,48 @@
+{
+  "id": "vnbusarchive.colorimetry.nat",
+  "name": "VNBUSARCHIVE COLORIMETRY PRO",
+  "version": "1.0.0",
+  "author": "Hoyuuna",
+  "description": "VNBUSARCHIVE-compliant industrial color balance: tint correction (Warm, Cool, Magenta, Green), saturation guard (10%-52%), and highlight gamut compression.",
+  "settings": [
+    {
+      "key": "enableTintCorrection",
+      "title": "Neutral Tint Balancer",
+      "description": "Neutralize warm/cool/magenta/green color casts based on midtone gray balance",
+      "type": "TOGGLE",
+      "defaultValue": true
+    },
+    {
+      "key": "saturationGuard",
+      "title": "Saturation Bounds (10%-52%)",
+      "description": "Compress oversaturated colors and protect against pale washed out hues",
+      "type": "TOGGLE",
+      "defaultValue": true
+    },
+    {
+      "key": "antiClipping",
+      "title": "Gamut Highlight Compression",
+      "description": "Soft-knee gamut compression when any color channel exceeds 4% clipping at 255",
+      "type": "TOGGLE",
+      "defaultValue": true
+    },
+    {
+      "key": "targetEvBias",
+      "title": "Highlight EV Bias",
+      "description": "Optional EV offset applied before capture to prevent sensor blowout",
+      "type": "SLIDER",
+      "defaultValue": 0,
+      "min": -4,
+      "max": 4,
+      "step": 1
+    },
+    {
+      "key": "colorProfileMode",
+      "title": "Processing Mode",
+      "description": "Target rendering profile style",
+      "type": "DROPDOWN",
+      "defaultValue": "ACCURATE",
+      "options": ["ACCURATE", "VIBRANT", "NEUTRAL_FLAT"]
+    }
+  ]
+}
