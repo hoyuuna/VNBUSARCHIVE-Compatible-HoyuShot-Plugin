@@ -1,35 +1,35 @@
 {
   "id": "vnbusarchive.colorimetry.nat",
-  "name": "VNBUSARCHIVE COLORIMETRY PRO",
-  "version": "1.0.0",
+  "name": "VNBUSARCHIVE-Compatible HoyuShot Plugin",
+  "version": "1.0.1",
   "author": "Hoyuuna",
-  "description": "VNBUSARCHIVE-compliant industrial color balance: tint correction (Warm, Cool, Magenta, Green), saturation guard (10%-52%), and highlight gamut compression.",
+  "description": "Chuẩn hóa trắc sắc học VNBUSARCHIVE: tự động khử 4 loại ám màu trên vùng trung tính (ấm/vàng, lạnh/xanh, magenta/hồng, xanh lá), khóa dải bão hòa màu an toàn (10% - 52%) và chống bệt màu highlight.",
   "settings": [
     {
       "key": "enableTintCorrection",
-      "title": "Neutral Tint Balancer",
-      "description": "Neutralize warm/cool/magenta/green color casts based on midtone gray balance",
+      "title": "Khử ám màu trung tính",
+      "description": "Tự động phân tích vùng xám trung tính và triệt tiêu các loại ám vàng, ám xanh dương, ám tím hồng hoặc ám xanh lá.",
       "type": "TOGGLE",
       "defaultValue": true
     },
     {
       "key": "saturationGuard",
-      "title": "Saturation Bounds (10%-52%)",
-      "description": "Compress oversaturated colors and protect against pale washed out hues",
+      "title": "Khóa độ bão hòa (10% - 52%)",
+      "description": "Nén các mảng màu bị rực gắt quá mức và phục hồi độ tươi cho ảnh chụp trong điều kiện sương mù, nhợt nhạt.",
       "type": "TOGGLE",
       "defaultValue": true
     },
     {
       "key": "antiClipping",
-      "title": "Gamut Highlight Compression",
-      "description": "Soft-knee gamut compression when any color channel exceeds 4% clipping at 255",
+      "title": "Chống bệt màu Highlight",
+      "description": "Nén dải màu mềm (soft-knee) khi phát hiện kênh màu vượt quá 4% số điểm ảnh bị chạm trần 255 nhằm giữ khối chi tiết vỏ xe và kim loại.",
       "type": "TOGGLE",
       "defaultValue": true
     },
     {
       "key": "targetEvBias",
-      "title": "Highlight EV Bias",
-      "description": "Optional EV offset applied before capture to prevent sensor blowout",
+      "title": "Bù trừ sáng Highlight (EV)",
+      "description": "Chủ động can thiệp bù trừ phơi sáng trước khi cảm biến chụp để chống cháy sáng chi tiết trắng.",
       "type": "SLIDER",
       "defaultValue": 0,
       "min": -4,
@@ -38,11 +38,11 @@
     },
     {
       "key": "colorProfileMode",
-      "title": "Processing Mode",
-      "description": "Target rendering profile style",
+      "title": "Chế độ xử lý màu",
+      "description": "Hồ sơ tái tạo màu sắc mục tiêu",
       "type": "DROPDOWN",
-      "defaultValue": "ACCURATE",
-      "options": ["ACCURATE", "VIBRANT", "NEUTRAL_FLAT"]
+      "defaultValue": "CHUAN_XAC",
+      "options": ["CHUAN_XAC", "RUC_RO", "TRUNG_TINH_PHANG"]
     }
   ]
 }
